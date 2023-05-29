@@ -1,0 +1,314 @@
+@keyframes pulse {
+    0% {
+        width: 125px;
+        height: 125px;
+        opacity: 0.9;
+    }
+
+    25% {
+        width: 130px;
+        height: 130px;
+        opacity: 0.5;
+    }
+
+    50% {
+        width: 125px;
+        height: 125px;
+        opacity: 0.8;
+    }
+
+    100% {
+        width: 120px;
+        height: 120px;
+        opacity: 1;
+    }
+}
+@keyframes pulse{
+    from {box-shadow: 0 0 10px rgba(155,255,255,0.5);}
+    to {
+        box-shadow: 0 0 20px rgba(255,255,255,0.5);
+        background-color: #f26149;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat Regular', Helvetica, sans-serif;
+    font-size: 16px;
+    color: rgb(112, 112, 112);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* لعمل لفتة عند وضع الماوس يغير اللون  */
+/* a:hover{
+    color: #f26149 !important;
+} */
+
+#page-header {
+    padding: 1.3rem 2rem;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.header-inner {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 7%;
+}
+
+.header-inner #logo {
+
+    flex: 1;
+
+}
+
+.header-inner nav {
+
+    display: flex;
+
+}
+
+.header-inner nav>a {
+    color: #fff;
+    padding: 3px 10px;
+    font-size: 0.7rem;
+}
+
+
+
+#page-header nav.social-nav a {
+    font-size: 1rem;
+
+}
+
+#page-header nav.social-nav a:hover {
+    color: #f26149;
+}
+
+#main-nav>a {
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+#hero-section {
+    height: 100vh;
+    background-image: url(../image/hero-bg40.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    /*   background-size: cover; */
+
+
+}
+
+.overlay {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(0, 0, 0, 0.15);
+
+}
+
+.block-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-box .price span {
+    text-align: center;
+    color: #000;
+    font-size: 0.65rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.hero-box .price span.n {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.hero-box {
+    position: relative;
+}
+
+.hero-box .price {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ffd800;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.hero-box h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.hero-box h1 .first {
+
+    font-size: 3.5rem;
+    font-weight: normal;
+    display: block;
+
+}
+
+.hero-box h1 .last {
+    font-family: 'Square peg', cursive;
+    font-size: 12rem;
+    display: block;
+    margin-top: -70px;
+    text-shadow: 7px 7px 5px #666;
+    font-style: italic;
+}
+
+.book-now {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.book-now a {
+
+    /* display: block;
+    width: 130px;
+    margin: 0 auto; */
+    background-color: #f26149;
+    padding: 1rem 1.7rem;
+    border-radius: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    width: 25%;
+    padding: 20px;
+    overflow: hidden;
+
+}
+
+.offer-img {
+    overflow: hidden;
+}
+
+.offer-img img {
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.offer-img img:hover {
+    /* قديش بدي اصغر او اكبر في تاثير الصورة 
+*/
+    transform: scale(1.25);
+    opacity: 0.7;
+
+}
+
+
+section#offers {
+    text-align: center;
+}
+
+#offers h2 {
+    text-transform: uppercase;
+    color: #000;
+    font-size: 2.2rem;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat Bold';
+}
+
+.section-desc {
+    margin: 0 auto 2rem;
+    width: 50%;
+    font-size: .9rem;
+}
+
+
+.offer-title a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+
+}
+
+.offer-title div {
+    color: #f26149;
+}
+
+.offer-title span {
+    color: #000;
+    font-size: 1.5rem;
+    margin: 0 0.3rem;
+}
+
+@media (max-width:480px) {
+    .col {
+        width: 100px;
+    }
+}
+
+@media (max-width:760px) {
+    .col {
+        width: 100%;
+    }
+
+  
+    }
+
+    #page-header {
+        padding: 1.2rem 1rem;
+
+    }
+
+    .red {
+        color: #f26149 !important;
+    }
+}
